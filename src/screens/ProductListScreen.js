@@ -1,4 +1,4 @@
-import { SafeAreaView, FlatList } from 'react-native';
+import { SafeAreaView, FlatList, View, Text } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import ProductCardComponent from '../components/ProductCardComponent';
 
@@ -34,6 +34,19 @@ export default function ProductList() {
     }, 2000);
     return () => clearTimeout(timer);
   });
+
+  if (loading) {
+    return (
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          flex: 1,
+        }}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
   const renderItem = ({ item }) => {
     console.log('the value of loading is point 1', loading);
     return <ProductCardComponent item={item} />;
