@@ -1,6 +1,8 @@
 import { SafeAreaView, FlatList, View, Text } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import ProductCardComponent from '../components/ProductCardComponent';
+import LottieView from 'lottie-react-native';
+import { theme } from '../constants/theme';
 
 const localProductList = [
   {
@@ -27,11 +29,9 @@ export default function ProductList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log('use effect is being called');
     const timer = setTimeout(() => {
       setLoading(false);
-      console.log('the value of loading is point 2', loading);
-    }, 2000);
+    }, 4000);
     return () => clearTimeout(timer);
   });
 
@@ -43,12 +43,25 @@ export default function ProductList() {
           alignItems: 'center',
           flex: 1,
         }}>
-        <Text>Loading...</Text>
+        <LottieView
+          source={require('../../assets/jsons/Animation2.json')}
+          autoPlay
+          loop
+          style={{ width: 300, height: 300 }} // Tamaño ajustado
+        />
+        <Text
+          style={{
+            fontFamily: theme.fontFamily.bold700,
+            fontSize: theme.sizes.large,
+            color: theme.colors.marineBlue,
+            marginTop: 20,
+          }}>
+          Loading....
+        </Text>
       </View>
     );
   }
   const renderItem = ({ item }) => {
-    console.log('the value of loading is point 1', loading);
     return <ProductCardComponent item={item} />;
   };
   return (

@@ -9,6 +9,7 @@ export const theme = {
     offWhite: '#F3F4F8',
     white: '#FFFFFF',
     black: '#000000',
+    marineBlue: '#336699',
   },
   sizes: {
     xSmall: 10,
