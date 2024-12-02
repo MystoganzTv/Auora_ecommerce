@@ -1,4 +1,3 @@
-import HomeScreen from './src/screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ProductList from './src/screens/ProductListScreen';
@@ -9,6 +8,7 @@ import {
 } from '@expo-google-fonts/roboto';
 import { useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
+import BottomTabs from './src/screens/BottomTabs';
 
 const Stack = createNativeStackNavigator();
 SplashScreen.preventAutoHideAsync();
@@ -26,15 +26,17 @@ export default function App() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
-    console.log('Fonts not loaded');
     return null;
   } else {
-    console.log('Fonts are Loaded');
   }
   return (
     <NavigationContainer onReady={onLayoutRootView}>
       <Stack.Navigator>
-        <Stack.Screen name='HomeScreen' component={HomeScreen} />
+        <Stack.Screen
+          name='BottomTabs'
+          component={BottomTabs}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name='ProductList' component={ProductList} />
       </Stack.Navigator>
     </NavigationContainer>
