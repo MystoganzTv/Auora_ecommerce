@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import ProfileScreen from './ProfileScreen';
 import CartScreen from './CartScreen';
+import SearchScreen from './SearchScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -25,6 +26,22 @@ export default function BottomTabs() {
             return (
               <Ionicons
                 name={focused ? 'home' : 'home-outline'}
+                size={theme.sizes.xLarge}
+                color={theme.colors.primary}
+              />
+            );
+          },
+        }}
+      />
+      <Tabs.Screen
+        name='Search'
+        component={SearchScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Ionicons
+                name={focused ? 'search' : 'search-outline'}
                 size={theme.sizes.xLarge}
                 color={theme.colors.primary}
               />
