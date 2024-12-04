@@ -9,6 +9,7 @@ import {
 import { useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import BottomTabs from './src/screens/BottomTabs';
+import ProductDetail from './src/screens/ProductDetail';
 
 const Stack = createNativeStackNavigator();
 SplashScreen.preventAutoHideAsync();
@@ -38,6 +39,7 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen name='ProductList' component={ProductList} />
+        <Stack.Screen name='ProductDetail' component={ProductDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );

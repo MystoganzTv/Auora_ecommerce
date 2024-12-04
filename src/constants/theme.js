@@ -1,4 +1,7 @@
 import { Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { Dimensions } from 'react-native';
+
+const { height, width } = Dimensions.get('window');
 
 export const theme = {
   colors: {
@@ -10,6 +13,7 @@ export const theme = {
     white: '#FFFFFF',
     black: '#000000',
     marineBlue: '#336699',
+    lightWhite: '#FAFAFC',
   },
   sizes: {
     xSmall: 10,
@@ -18,6 +22,8 @@ export const theme = {
     large: 20,
     xLarge: 24,
     xxLarge: 44,
+    width,
+    height,
   },
   fontFamily: {
     bold700: 'Roboto_700Bold',
