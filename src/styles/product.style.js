@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.lightwhite,
   },
   image: {
-    marginVertical: 10,
+    marginTop: 10,
+    marginBottom: 10,
     width: '95%',
     height: 280,
     alignSelf: 'center',
@@ -15,12 +16,30 @@ const styles = StyleSheet.create({
   },
   details: {
     backgroundColor: theme.colors.lightWhite,
-    width: theme.sizes.width,
+    width: '95%', // Igual al ancho de la imagen
+    alignSelf: 'center', // Asegúrate de centrarlo como la imagen
+    borderRadius: 10, // Opcional, para consistencia visual
+    padding: 16, // Añade espacio interno
   },
   titleRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginHorizontal: 20,
+  },
+  title: {
+    fontSize: theme.sizes.large,
+    fontFamily: 'Roboto_700Bold',
+    marginLeft: 10,
+  },
+  ratingRow: {
+    flexDirection: 'row', // Organización horizontal
+    justifyContent: 'space-between', // Distribución uniforme
+    alignItems: 'center', // Alineación vertical
+  },
+  rating: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    marginTop: theme.sizes.xSmall,
   },
 });
 export default styles;

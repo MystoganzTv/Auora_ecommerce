@@ -8,7 +8,7 @@ const HomeHeadingComponent = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>New Rivals</Text>
+        <Text style={styles.headerTitle}>New Arrivals</Text>
         <TouchableOpacity onPress={() => navigation.navigate('ProductList')}>
           <Entypo name='grid' size={24} />
         </TouchableOpacity>

@@ -4,19 +4,19 @@ const localProductList = [
   {
     id: '1A',
     title: 'Colorful Furniture',
-    price: '$100',
+    price: '100',
     path: require('../../assets/images/fn3.jpg'),
   },
   {
     id: '1B',
     title: 'Comfy sofa',
-    price: '$200',
+    price: '200',
     path: require('../../assets/images/fn2.jpg'),
   },
   {
     id: '1C',
     title: 'Beautiful Home furniture',
-    price: '$500',
+    price: '500',
     path: require('../../assets/images/fn1.jpg'),
   },
 ];
@@ -25,7 +25,6 @@ const fetchHomeProduct = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  console.log('this hook is getting called');
 
   const fetchData = async () => {
     try {
