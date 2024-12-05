@@ -56,7 +56,7 @@ export default function ProductDetail() {
           {/* Description title */}
           <Text></Text>
           {/* Description text */}
-          <Text></Text>
+          <Text> </Text>
         </View>
       </View>
     </View>
