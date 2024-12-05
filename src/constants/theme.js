@@ -28,5 +28,6 @@ export const theme = {
   fontFamily: {
     bold700: 'Roboto_700Bold',
     regular400: 'Roboto_400Regular',
+    medium500: 'Roboto_500Medium',
   },
 };

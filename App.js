@@ -5,6 +5,7 @@ import {
   useFonts,
   Roboto_400Regular,
   Roboto_700Bold,
+  Roboto_500Medium,
 } from '@expo-google-fonts/roboto';
 import { useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
@@ -18,6 +19,7 @@ export default function App() {
   let [fontsLoaded] = useFonts({
     Roboto_700Bold,
     Roboto_400Regular,
+    Roboto_500Medium,
   });
 
   const onLayoutRootView = useCallback(async () => {

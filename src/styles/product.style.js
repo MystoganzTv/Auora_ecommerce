@@ -28,6 +28,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: theme.sizes.large,
     fontFamily: 'Roboto_700Bold',
+  },
+  ratingScore: {
+    fontSize: theme.sizes.large,
+    fontFamily: 'Roboto_700Bold',
     marginLeft: 10,
   },
   ratingRow: {
@@ -40,6 +44,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     marginTop: theme.sizes.xSmall,
+  },
+  priceWrapper: {
+    backgroundColor: theme.colors.secondary,
+    borderRadius: theme.sizes.large,
+    paddingHorizontal: 10,
+  },
+  price: {
+    fontSize: theme.sizes.large,
+    fontFamily: theme.fontFamily.medium500,
+  },
+
+  textSpace: {
+    marginHorizontal: theme.sizes.xSmall,
+    fontFamily: theme.fontFamily.medium500,
+    color: theme.colors.gray,
   },
 });
 export default styles;
