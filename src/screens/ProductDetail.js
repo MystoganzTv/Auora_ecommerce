@@ -4,11 +4,12 @@ import { useRoute } from '@react-navigation/native';
 import styles from '../styles/product.style';
 import { theme } from '../constants/theme';
 import { RatingInput } from 'react-native-stock-star-rating';
-import { Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { SimpleLineIcons } from '@expo/vector-icons';
+import { decrement, increment } from '../utils/product_helpers';
 
 export default function ProductDetail() {
   const [rating, setRating] = useState(0);
+  const [count, setCount] = useState(1);
   const route = useRoute();
 
   const item = route.params?.item;
@@ -24,7 +25,10 @@ export default function ProductDetail() {
           <Text style={styles.title}> {item.title}</Text>
           <Text style={[styles.price, styles.priceWrapper]}>${item.price}</Text>
         </View>
+        {/* This is for title and price */}
         <View style={styles.ratingRow}>
+          {/* This is for star rating */}
+
           <View style={styles.rating}>
             <RatingInput
               rating={rating}
@@ -35,15 +39,24 @@ export default function ProductDetail() {
             />
             <Text style={styles.ratingScore}>[4.9]</Text>
           </View>
+
+          {/* This is for plus and minus */}
           <View style={styles.rating}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => increment(setCount, count)}>
               <SimpleLineIcons name='plus' size={20} />
             </TouchableOpacity>
-            <Text style={styles.textSpace}>3</Text>
-            <TouchableOpacity>
+            <Text style={styles.textSpace}>{count}</Text>
+            <TouchableOpacity onPress={() => decrement(setCount, count)}>
               <SimpleLineIcons name='minus' size={20} />
             </TouchableOpacity>
           </View>
+        </View>
+        {/* This is for showing description */}
+        <View>
+          {/* Description title */}
+          <Text></Text>
+          {/* Description text */}
+          <Text></Text>
         </View>
       </View>
     </View>
