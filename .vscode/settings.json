@@ -1,0 +1,7 @@
+{
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "materialTheme.accent": "Blue",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.iconTheme": "a-file-icon-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode"
+}
