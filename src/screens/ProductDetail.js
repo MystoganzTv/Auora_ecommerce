@@ -88,12 +88,17 @@ export default function ProductDetail() {
         {/* Card Related Information */}
         <View style={styles.cartRow}>
           {/* Fav Button */}
-          <TouchableOpacity onPress={() => console.log("fav tapped")}>
+          <TouchableOpacity
+            onPress={() => console.log("fav tapped")}
+            style={styles.favButton}
+          >
             <AntDesign name="heart" size={18} />
           </TouchableOpacity>
           {/* Buy Button */}
-
-          <TouchableOpacity onPress={() => console.log("buy tapped")}>
+          <TouchableOpacity
+            onPress={() => console.log("buy tapped")}
+            style={styles.buyButton}
+          >
             <Text style={styles.cartTitle}>BUY NOW</Text>
           </TouchableOpacity>
           {/* Shopping bag icon */}
@@ -101,7 +106,11 @@ export default function ProductDetail() {
             onPress={() => console.log("shopping bag tapped")}
             style={styles.addCart}
           >
-            <Fontisto name="shopping-bag" size={22} />
+            <Fontisto
+              name="shopping-bag"
+              size={22}
+              color={theme.colors.lightWhite}
+            />
           </TouchableOpacity>
         </View>
       </View>

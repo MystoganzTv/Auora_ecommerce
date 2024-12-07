@@ -87,14 +87,35 @@ const styles = StyleSheet.create({
     marginTop: theme.sizes.large,
   },
   cartTitle: {
-    marginLeft: theme.sizes.small,
     alignItems: "center",
     fontFamily: "Roboto_500Medium",
     fontSize: theme.sizes.medium,
+    color: theme.colors.lightWhite,
   },
   addCart: {
     width: 37,
     height: 37,
+    backgroundColor: theme.colors.black,
+    borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buyButton: {
+    backgroundColor: theme.colors.black,
+    alignItems: "center",
+    justifyContent: "center",
+    width: theme.sizes.width * 0.7,
+    borderRadius: theme.sizes.large,
+    padding: 10,
+    marginHorizontal: 10,
+  },
+  favButton: {
+    backgroundColor: theme.colors.primary,
+    width: 37,
+    height: 37,
+    borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 export default styles;
