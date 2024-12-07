@@ -80,5 +80,21 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: theme.sizes.large,
   },
+  cartRow: {
+    marginHorizontal: 5,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: theme.sizes.large,
+  },
+  cartTitle: {
+    marginLeft: theme.sizes.small,
+    alignItems: "center",
+    fontFamily: "Roboto_500Medium",
+    fontSize: theme.sizes.medium,
+  },
+  addCart: {
+    width: 37,
+    height: 37,
+  },
 });
 export default styles;

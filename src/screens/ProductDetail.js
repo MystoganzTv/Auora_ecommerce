@@ -5,6 +5,8 @@ import styles from "../styles/product.style";
 import { theme } from "../constants/theme";
 import { RatingInput } from "react-native-stock-star-rating";
 import {
+  AntDesign,
+  Fontisto,
   Ionicons,
   MaterialCommunityIcons,
   SimpleLineIcons,
@@ -66,24 +68,41 @@ export default function ProductDetail() {
           quasi. Repellendus, reiciendis!
         </Text>
 
-        {/* Show text location */}
-        <View style={{ marginHorizontal: theme.sizes.small }}>
+        {/* Show location */}
+        <View style={styles.location}>
           {/* Show icon and location name */}
-          <View style={styles.location}>
-            <View style={{ flexDirection: "row" }}>
-              <Ionicons name="location-outline" size={18} />
-              <View style={{ marginLeft: 10 }}>
-                <Text>123 Main Street, Springfield</Text>
-              </View>
-              {/* Delivery Info */}
-              <View >
-                <MaterialCommunityIcons
-                  name="truck-delivery-outline"
-                  size={18}
-                />
-              </View>
-            </View>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <Ionicons name="location-outline" size={18} />
+            <Text style={{ marginLeft: 8, fontSize: theme.sizes.medium }}>
+              123 Main Street
+            </Text>
           </View>
+
+          {/* Delivery Info */}
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <MaterialCommunityIcons name="truck-delivery-outline" size={18} />
+            <Text style={{ marginLeft: 10 }}>Free Delivery</Text>
+          </View>
+        </View>
+
+        {/* Card Related Information */}
+        <View style={styles.cartRow}>
+          {/* Fav Button */}
+          <TouchableOpacity onPress={() => console.log("fav tapped")}>
+            <AntDesign name="heart" size={18} />
+          </TouchableOpacity>
+          {/* Buy Button */}
+
+          <TouchableOpacity onPress={() => console.log("buy tapped")}>
+            <Text style={styles.cartTitle}>BUY NOW</Text>
+          </TouchableOpacity>
+          {/* Shopping bag icon */}
+          <TouchableOpacity
+            onPress={() => console.log("shopping bag tapped")}
+            style={styles.addCart}
+          >
+            <Fontisto name="shopping-bag" size={22} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
