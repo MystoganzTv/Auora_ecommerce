@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useRoute } from "@react-navigation/native";
 import styles from "../styles/product.style";
 import { theme } from "../constants/theme";
@@ -11,11 +11,16 @@ import {
   MaterialCommunityIcons,
   SimpleLineIcons,
 } from "@expo/vector-icons";
-import { decrement, increment } from "../utils/product_helpers";
+import { decrement, handlePress, increment } from "../utils/product_helpers";
 
-export default function ProductDetail() {
+import { LoginContext, FavContext } from "../contexts/UserContext";
+
+export default function ProductDetail({ navigation }) {
   const [rating, setRating] = useState(0);
   const [count, setCount] = useState(1);
+  const { userLogin, setUserLogin } = useContext(LoginContext);
+
+  const { reFetchFav, setReFetchFav } = useContext(FavContext);
   const route = useRoute();
 
   const item = route.params?.item;
@@ -89,10 +94,12 @@ export default function ProductDetail() {
         <View style={styles.cartRow}>
           {/* Fav Button */}
           <TouchableOpacity
-            onPress={() => console.log("fav tapped")}
+            onPress={() => {
+              handlePress(userLogin, navigation, item, setReFetchFav);
+            }}
             style={styles.favButton}
           >
-            <AntDesign name="heart" size={18} />
+            <AntDesign name="heart" size={18} color={theme.colors.lightWhite} />
           </TouchableOpacity>
           {/* Buy Button */}
           <TouchableOpacity

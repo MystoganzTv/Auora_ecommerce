@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   favButton: {
     backgroundColor: theme.colors.primary,
     width: 37,
-    height: 37,
+    height: 37, 
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
