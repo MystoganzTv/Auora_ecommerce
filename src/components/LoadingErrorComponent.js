@@ -1,18 +1,19 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import LottieView from 'lottie-react-native';
+import React from "react";
+import { View, Text } from "react-native";
+import LottieView from "lottie-react-native";
 
 export default function LoadingErrorComponent({ isLoading, error }) {
   if (isLoading) {
     return (
       <View
         style={{
-          justifyContent: 'center',
-          alignItems: 'center',
+          justifyContent: "center",
+          alignItems: "center",
           flex: 1,
-        }}>
+        }}
+      >
         <LottieView
-          source={require('../../assets/jsons/Animation2.json')}
+          source={require("../../assets/jsons/Animation.json")}
           autoPlay
           loop
           style={{ width: 300, height: 300 }} // Tamaño ajustado
@@ -24,10 +25,11 @@ export default function LoadingErrorComponent({ isLoading, error }) {
     return (
       <View
         style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100%',
-        }}>
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+        }}
+      >
         <Text>We have an error</Text>
       </View>
     );

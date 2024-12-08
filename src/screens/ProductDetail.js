@@ -24,6 +24,8 @@ export default function ProductDetail({ navigation }) {
   const route = useRoute();
 
   const item = route.params?.item;
+  console.log("your product id is: ", item.id);
+  console.log(" Fav is: ", reFetchFav);
 
   return (
     <View style={styles.container}>
